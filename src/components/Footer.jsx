@@ -9,27 +9,31 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div className="footer-header">
-          <div className="footer-name">Fred</div>
-          <div className="footer-title">Front-End Developer</div>
-        </div>
-
-        <nav className="footer-nav">
-          <a onClick={() => scrollToSection('services')}>Services</a>
-          <a onClick={() => scrollToSection('portfolio')}>Portfolio</a>
-          <a onClick={() => scrollToSection('contact')}>Contact</a>
-        </nav>
-
-        <div className="footer-social">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <Linkedin size={16} />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <Twitter size={16} />
-          </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-            <Github size={16} />
-          </a>
+        <div className="footer-main">
+          <div className="footer-brand">
+            <h3>Fred</h3>
+            <p>Front-End Developer</p>
+          </div>
+          
+          <div className="footer-center">
+            <nav className="footer-nav">
+              <a onClick={() => scrollToSection('services')}>Services</a>
+              <a onClick={() => scrollToSection('portfolio')}>Portfolio</a>
+              <a onClick={() => scrollToSection('contact')}>Contact</a>
+            </nav>
+            
+            <div className="footer-social">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Linkedin size={18} />
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <Twitter size={18} />
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <Github size={18} />
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="footer-bottom">
