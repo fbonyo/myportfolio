@@ -3,17 +3,16 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--bg-primary);
+  background-color: rgba(var(--bg-primary-rgb), 0.9);
   border-bottom: 1px solid var(--border-color);
   z-index: 1000;
   padding: 1.25rem 2rem;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(var(--bg-primary-rgb), 0.8);
 }
 
 .header-content {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -21,16 +20,19 @@
 }
 
 .logo {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
 
 .nav {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav a {
@@ -41,6 +43,7 @@
   font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .nav a:hover {

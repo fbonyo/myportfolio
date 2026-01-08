@@ -26,8 +26,8 @@ const Home = () => {
           <h1>Hi I'm Fred</h1>
           <h2>Front-End Developer</h2>
           <p>
-            Experienced in building beautiful static<br />
-            websites and web applications while<br />
+            Experienced in building beautiful static
+            websites and web applications while
             adhering to latest code practices.
           </p>
           <button className="contact-btn" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>

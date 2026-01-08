@@ -13,16 +13,17 @@ const Contact = () => {
         <div className="contact-info">
           <div className="contact-item">
             <div className="contact-icon">
-              <Phone size={24} />
+              <Phone size={18} />
             </div>
             <div className="contact-details">
               <h3>Call Me</h3>
               <p>+254-706-225-371</p>
             </div>
           </div>
+          
           <div className="contact-item">
             <div className="contact-icon">
-              <Mail size={24} />
+              <Mail size={18} />
             </div>
             <div className="contact-details">
               <h3>Email</h3>
@@ -32,7 +33,7 @@ const Contact = () => {
 
           <div className="contact-item">
             <div className="contact-icon">
-              <MapPin size={24} />
+              <MapPin size={18} />
             </div>
             <div className="contact-details">
               <h3>Location</h3>

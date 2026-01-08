@@ -21,7 +21,7 @@ const About = () => {
               technologies. Also very open to learning new technologies and skills.
             </p>
             <button className="download-cv">
-              <Download size={18} />
+              <Download size={20} />
               Download CV
             </button>
           </div>

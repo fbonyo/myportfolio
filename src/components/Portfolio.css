@@ -10,13 +10,22 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  text-align: center;
 }
 
 .portfolio-slider {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .portfolio-slider {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 
 .slider-btn {
@@ -24,35 +33,68 @@
   border: none;
   color: var(--primary-blue);
   cursor: pointer;
-  padding: 0.5rem;
-  transition: opacity 0.3s ease;
+  padding: 1rem;
+  transition: all 0.3s ease;
   flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider-btn:hover {
-  opacity: 0.7;
+  background-color: var(--primary-blue);
+  color: white;
+  transform: scale(1.1);
 }
 
 .slider-content {
   flex: 1;
   display: flex;
-  gap: 4rem;
+  flex-direction: column;
+  gap: 3rem;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .slider-content {
+    flex-direction: row;
+    gap: 4rem;
+  }
 }
 
 .project-preview {
   flex: 1;
+  width: 100%;
+  max-width: 600px;
 }
 
 .project-image-placeholder {
   width: 100%;
-  height: 400px;
+  height: 300px;
   background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
-  border-radius: 12px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .project-image-placeholder {
+    height: 400px;
+  }
 }
 
 .project-info {
   flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .project-info {
+    text-align: left;
+  }
 }
 
 .project-info h3 {
@@ -72,18 +114,24 @@
   display: flex;
   justify-content: center;
   gap: 0.75rem;
+  margin-top: 2rem;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: var(--border-color);
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .dot.active {
   background-color: var(--primary-blue);
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  transform: scale(1.2);
 }
