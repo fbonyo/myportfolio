@@ -3,4 +3,13 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  publicDir: 'public',
+  build: {
+    assetsInlineLimit: 0,
+  },
+  server: {
+    fs: {
+      strict: false
+    }
+  }
 })

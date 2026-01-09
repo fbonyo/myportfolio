@@ -1,21 +1,20 @@
 .about {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   background-color: var(--bg-secondary);
 }
 
 .about-content {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   width: 100%;
-  text-align: center;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .section-header h2 {
@@ -28,23 +27,23 @@
 
 .subtitle {
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .about-body {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .about-body {
     flex-direction: row;
-    text-align: left;
+    gap: 3rem;
+    align-items: flex-start;
   }
 }
 
@@ -52,57 +51,45 @@
   flex-shrink: 0;
 }
 
-.character-placeholder {
-  width: 340px;
-  height: 420px;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-}
-
-@media (min-width: 1024px) {
-  .character-placeholder {
-    margin: 0;
-  }
+.character-image {
+  width: 280px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
   flex: 1;
-  max-width: 600px;
+  text-align: left;
 }
 
 .about-text p {
-  font-size: 1.25rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--text-secondary);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   font-weight: 400;
-}
-
-@media (min-width: 1024px) {
-  .about-text {
-    text-align: left;
-  }
 }
 
 .download-cv {
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: white;
   border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
-  border-radius: 12px;
+  padding: 0.875rem 2rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .download-cv::before {
@@ -118,7 +105,7 @@
 
 .download-cv:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }
 
 .download-cv:hover::before {
@@ -127,4 +114,15 @@
 
 .download-cv:active {
   transform: translateY(0);
+}
+
+@media (max-width: 767px) {
+  .about-text {
+    text-align: center;
+  }
+  
+  .character-image {
+    width: 240px;
+    height: 300px;
+  }
 }

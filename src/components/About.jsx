@@ -1,5 +1,6 @@
 import { Download } from 'lucide-react';
 import './About.css';
+import fredImage from '../assets/fred.png';
 
 const About = () => {
   return (
@@ -9,21 +10,24 @@ const About = () => {
           <h2>About Me</h2>
           <p className="subtitle">My introduction</p>
         </div>
-
         <div className="about-body">
           <div className="about-image">
-            <div className="character-placeholder"></div>
+            <img src={fredImage} alt="Fred" className="character-image" />
           </div>
-
           <div className="about-text">
             <p>
-              A developer with experience building full stack applications using a variety of 
-              technologies. Also very open to learning new technologies and skills.
+              Dedicated Front-End Developer with a proven track record of building production-ready applications using React 18, JavaScript (ES6+), and modern web technologies. I specialize in creating responsive, user-friendly interfaces with a focus on clean code, performance optimization, and exceptional user experiences.
             </p>
-            <button className="download-cv">
-              <Download size={20} />
+            <a 
+              href="https://github.com/fbonyo/myportfolio/raw/main/cv/Fred_Bonyo_CV.pdf"
+              download="Fred_Bonyo_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="download-cv"
+            >
+              <Download size={18} />
               Download CV
-            </button>
+            </a>
           </div>
         </div>
       </div>

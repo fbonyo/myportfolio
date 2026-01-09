@@ -21,32 +21,29 @@ const Home = () => {
             <Github size={20} />
           </a>
         </div>
-        
         <div className="home-text">
           <h1>Hi I'm Fred</h1>
           <h2>Front-End Developer</h2>
           <p>
-            Experienced in building beautiful static
-            websites and web applications while
-            adhering to latest code practices.
+            I create responsive and user-friendly<br />
+            web interfaces using modern technologies<br />
+            like React, JavaScript, and CSS.
           </p>
           <button className="contact-btn" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
             <span>Contact Me</span>
             <ChevronDown size={18} style={{ transform: 'rotate(-90deg)' }} />
           </button>
         </div>
-
         <div className="home-image">
           <div className="avatar-circle">
-            <img 
-              src={profileImage} 
-              alt="Fred - Front-End Developer" 
+            <img
+              src={profileImage}
+              alt="Fred - Front-End Developer"
               className="profile-image"
             />
           </div>
         </div>
       </div>
-
       <div className="scroll-indicator" onClick={scrollToAbout}>
         <div className="mouse"></div>
         <span>Scroll down</span>
