@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import './Portfolio.css';
 import moviewatchImage from '../assets/moviewatch.png.png';
-import weatherdashImage from '../assets/weatherdash.png.png';
+import weatherdashImage from '../assets/weatherdashh.png';
 
 const Portfolio = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
