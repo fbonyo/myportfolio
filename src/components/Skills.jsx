@@ -8,23 +8,17 @@ const Skills = () => {
   const skillsData = {
     frontend: [
       { name: 'HTML & CSS', level: 90 },
-      { name: 'Javascript', level: 85 },
+      { name: 'JavaScript (ES6+)', level: 85 },
       { name: 'React', level: 80 },
-      { name: 'Vue JS', level: 75 },
-      { name: 'Bootstrap', level: 85 }
+      { name: 'Vite', level: 85 },
+      { name: 'Tailwind CSS', level: 80 }
     ],
-    backend: [
-      { name: 'Node.js', level: 80 },
-      { name: 'Python', level: 75 },
-      { name: 'PHP', level: 70 },
-      { name: 'MySQL', level: 85 },
-      { name: 'MongoDB', level: 75 }
-    ],
-    designer: [
-      { name: 'Figma', level: 85 },
-      { name: 'Adobe XD', level: 80 },
-      { name: 'Photoshop', level: 75 },
-      { name: 'Illustrator', level: 70 }
+    tools: [
+      { name: 'Git & GitHub', level: 85 },
+      { name: 'Responsive Design', level: 90 },
+      { name: 'API Integration', level: 80 },
+      { name: 'Performance Optimization', level: 75 },
+      { name: 'Web Accessibility', level: 70 }
     ]
   };
 
@@ -39,10 +33,9 @@ const Skills = () => {
           <h2>Skills</h2>
           <p className="subtitle">My technical level</p>
         </div>
-
         <div className="skills-categories">
           <div className="skill-category">
-            <div 
+            <div
               className="category-header"
               onClick={() => toggleSection('frontend')}
             >
@@ -58,8 +51,8 @@ const Skills = () => {
                   <div key={index} className="skill-item">
                     <div className="skill-name">{skill.name}</div>
                     <div className="skill-bar">
-                      <div 
-                        className="skill-progress" 
+                      <div
+                        className="skill-progress"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
@@ -70,52 +63,24 @@ const Skills = () => {
           </div>
 
           <div className="skill-category">
-            <div 
+            <div
               className="category-header"
-              onClick={() => toggleSection('designer')}
+              onClick={() => toggleSection('tools')}
             >
               <div className="category-title">
-                <span className="category-icon">🎨</span>
-                <span>Designer</span>
+                <span className="category-icon">🛠️</span>
+                <span>Tools & Other Skills</span>
               </div>
-              {openSection === 'designer' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+              {openSection === 'tools' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
             </div>
-            {openSection === 'designer' && (
+            {openSection === 'tools' && (
               <div className="category-content">
-                {skillsData.designer.map((skill, index) => (
+                {skillsData.tools.map((skill, index) => (
                   <div key={index} className="skill-item">
                     <div className="skill-name">{skill.name}</div>
                     <div className="skill-bar">
-                      <div 
-                        className="skill-progress" 
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <div className="skill-category">
-            <div 
-              className="category-header"
-              onClick={() => toggleSection('backend')}
-            >
-              <div className="category-title">
-                <span className="category-icon">💻</span>
-                <span>Backend Developer</span>
-              </div>
-              {openSection === 'backend' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-            </div>
-            {openSection === 'backend' && (
-              <div className="category-content">
-                {skillsData.backend.map((skill, index) => (
-                  <div key={index} className="skill-item">
-                    <div className="skill-name">{skill.name}</div>
-                    <div className="skill-bar">
-                      <div 
-                        className="skill-progress" 
+                      <div
+                        className="skill-progress"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>

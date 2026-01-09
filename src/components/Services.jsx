@@ -1,23 +1,19 @@
-import { ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 import './Services.css';
 
 const Services = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const services = [
-    {
-      icon: '🎨',
-      title: 'UI/UX Designer',
-      description: 'View More'
-    },
-    {
-      icon: '</>',
-      title: 'Frontend Developer',
-      description: 'View More'
-    },
-    {
-      icon: '💾',
-      title: 'Backend Developer',
-      description: 'View More'
-    }
+    'Responsive Web Design & Development',
+    'React Application Development',
+    'API Integration & Data Management',
+    'Performance Optimization',
+    'Cross-Browser Compatibility',
+    'Mobile-First Design Implementation',
+    'Modern UI/UX Implementation',
+    'Code Refactoring & Maintenance'
   ];
 
   return (
@@ -27,18 +23,28 @@ const Services = () => {
           <h2>Services</h2>
           <p className="subtitle">What I Offer</p>
         </div>
-
         <div className="services-grid">
-          {services.map((service, index) => (
-            <div key={index} className="service-card">
-              <div className="service-icon">{service.icon}</div>
-              <h3>{service.title}</h3>
-              <a href="#" className="service-link">
-                {service.description}
-                <ArrowRight size={18} />
-              </a>
-            </div>
-          ))}
+          <div className="service-card">
+            <div className="service-icon">{'</>'}</div>
+            <h3>Frontend Developer</h3>
+            <button 
+              onClick={() => setIsOpen(!isOpen)} 
+              className="service-link"
+            >
+              View More
+              {isOpen ? <ChevronUp size={18} /> : <ArrowRight size={18} />}
+            </button>
+            
+            {isOpen && (
+              <div className="service-details">
+                <ul>
+                  {services.map((service, index) => (
+                    <li key={index}>{service}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>

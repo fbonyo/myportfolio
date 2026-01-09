@@ -11,13 +11,13 @@ const Home = () => {
     <section id="home" className="home">
       <div className="home-content">
         <div className="social-links">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/fredrick-bonyo-5a8893196/" target="_blank" rel="noopener noreferrer">
             <Linkedin size={20} />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/frobokenya" target="_blank" rel="noopener noreferrer">
             <Twitter size={20} />
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/fbonyo" target="_blank" rel="noopener noreferrer">
             <Github size={20} />
           </a>
         </div>
